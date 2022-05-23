@@ -6,8 +6,17 @@ import Link from "next/link";
 import Navbar from "components/Navbars/AuthNavbar.js";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import { useRouter } from "next/router";
 
 export default function Index() {
+  const router = useRouter();
+  const href = "/purchase";
+
+  const handleClickToPurchase = (e) => {
+    e.preventDefault();
+    router.push(href);
+  };
+
   return (
     <>
       <IndexNavbar fixed />
@@ -38,6 +47,7 @@ export default function Index() {
                   </p>
                   <button
                     className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    onClick={handleClickToPurchase}
                     type="button"
                   >
                     Purchase
