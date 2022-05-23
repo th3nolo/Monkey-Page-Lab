@@ -36,6 +36,12 @@ export default function Index() {
                     What is the purpose for which it was created. And something
                     else to add. I don't know, something else
                   </p>
+                  <button
+                    className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                    type="button"
+                  >
+                    Purchase
+                  </button>
                 </div>
               </div>
             </div>
