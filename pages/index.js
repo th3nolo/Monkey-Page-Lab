@@ -12,16 +12,12 @@ export default function Index() {
   const router = useRouter();
   const href = "/purchase";
 
-  const handleClickToPurchase = (e) => {
-    e.preventDefault();
-    router.push(href);
-  };
 
   return (
     <>
       <IndexNavbar fixed />
       <main>
-        <div className="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+        <div className="relative pt-48 pb-48 flex content-center items-center justify-center min-h-screen-75">
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
@@ -45,13 +41,14 @@ export default function Index() {
                     What is the purpose for which it was created. And something
                     else to add. I don't know, something else
                   </p>
+                  <Link href='/mint'>
                   <button
-                    className="bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                    onClick={handleClickToPurchase}
+                    className="mt-4 bg-lightBlue-500 text-white active:bg-lightBlue-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                  >
-                    Purchase
+                    >
+                    Mint
                   </button>
+                    </Link>
                 </div>
               </div>
             </div>
