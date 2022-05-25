@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // components
 
@@ -10,7 +11,8 @@ export default function CardProfile() {
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
               <div className="relative">
-                <img
+                <Image
+                  layout="fill"
                   alt="..."
                   src="/img/team-2-800x800.jpg"
                   className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
@@ -41,7 +43,7 @@ export default function CardProfile() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <h3 className="text-xl font-semibold leading-normal mb-2 text-blueGray-700 mb-2">
+            <h3 className="text-xl font-semibold leading-normal text-blueGray-700 mb-2">
               Jenna Stones
             </h3>
             <div className="text-sm leading-normal mt-0 mb-2 text-blueGray-400 font-bold uppercase">
