@@ -1,7 +1,5 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
-import Image from "next/image";
-
-// components
 
 export default function CardProfile() {
   return (
@@ -11,8 +9,7 @@ export default function CardProfile() {
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
               <div className="relative">
-                <Image
-                  layout="fill"
+                <img
                   alt="..."
                   src="/img/team-2-800x800.jpg"
                   className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"

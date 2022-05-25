@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -14,9 +14,8 @@ export default function Navbar(props) {
                 className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                 href="#pablo"
               >
-                <Image
-                  width={48}
-                  height={48}
+                <img
+                  className="h-12 w-12 bg-white"
                   src="/img/monkeyLab/monkey-labs-logo.png"
                   alt="monkey page logo"
                 />
