@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "next/app";

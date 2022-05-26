@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm run build:tailwind && npm run dev",
@@ -46,6 +47,7 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.1.6",
     "autoprefixer": "10.2.5",
+    "eslint-config-next": "^12.1.6",
     "eslint-config-prettier": "^8.5.0",
     "postcss": "8.2.8"
   }
