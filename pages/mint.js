@@ -5,24 +5,22 @@ import { abi } from "const/abi";
 import Modal from "components/Modal/Modal";
 
 const Mint = () => {
-
-
   const { data, error, fetch, isFetching, isLoading, setData } =
     useWeb3ExecuteFunction({
       abi: abi,
-      contractAddress: "0x1BD06A547113226b7a646DD97b7fDCFe372af018",
+      contractAddress: "0x0d092C42e0208d7D5147675E937205520244a967",
       functionName: "safeMint",
-      msgValue: "100000000000000000",
+      msgValue: "27417020957901318",
     });
 
   const errorMessage =
     error &&
-    "An unexpected error has occurred, make sure you have metamask installed";
+    "An unexpected error has occurred, make sure you have metamask installed and logged in, or you have sufficient tokens to complete the transaction";
 
   console.log("error", error);
   const onMint = () => {
     setData(undefined);
-    fetch({ params: { msgValue: "100000000000000000" } });
+    fetch({ params: { msgValue: "27498700721471430" } });
   };
   console.log(data);
   return (

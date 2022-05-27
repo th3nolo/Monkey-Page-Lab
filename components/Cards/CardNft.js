@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Link from "next/link";
 const CardNft = ({ tokenId, syncedAt, metadata }) => {
@@ -11,6 +12,22 @@ const CardNft = ({ tokenId, syncedAt, metadata }) => {
             {tokenId}
           </h5>
         </a>
+        {Boolean(metadata) ? (
+          <></>
+        ) : (
+          <div
+            style={{
+              maxWidth: "100px",
+              margin: "auto",
+            }}
+          >
+            <img
+              alt="..."
+              src="/img/monkeyLab/monkeylab-white.png"
+              className="rounded-full border-none shadow-xl"
+            />
+          </div>
+        )}
         <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
           {date}
         </p>

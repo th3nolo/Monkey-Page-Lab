@@ -11,10 +11,9 @@ export default function Profile() {
   const { account } = useMoralis();
   const { data, isLoading } = useNFTBalances({
     abi: abi,
-    contractAddress: "0x1BD06A547113226b7a646DD97b7fDCFe372af018",
+    contractAddress: "0x0d092C42e0208d7D5147675E937205520244a967",
   });
 
-  console.log(data);
   return (
     <>
       <Navbar transparent />
