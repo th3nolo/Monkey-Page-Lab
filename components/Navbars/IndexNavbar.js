@@ -28,13 +28,13 @@ export default function Navbar(props) {
               type="button"
               onClick={() => setNavbarOpen(!navbarOpen)}
             >
-              <i className="fas fa-bars"></i>
+              <i className="text-white fas fa-bars"></i>
             </button>
           </div>
           <div
             className={
               "lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" +
-              (navbarOpen ? " block" : " hidden")
+              (navbarOpen ? " block rounded shadow-l" : " hidden")
             }
             id="example-navbar-warning"
           >
@@ -42,7 +42,7 @@ export default function Navbar(props) {
               {isAuthenticated ? (
                 <li className="flex items-center">
                   <Link href="/profile">
-                    <a className="hover:text-blueGray-500 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
+                    <a className="lg:text-white hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
                       My NFTs
                     </a>
                   </Link>
@@ -53,7 +53,7 @@ export default function Navbar(props) {
                 {isAuthenticated ? (
                   <button
                     onClick={() => logout()}
-                    className=" hover:text-blueGray-200 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    className="lg:text-white hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   >
                     <i className="text-blueGray-400 far fa-user text-lg leading-lg mr-2" />{" "}
                     {account?.slice(0, 10)}...
