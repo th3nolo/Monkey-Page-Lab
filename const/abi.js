@@ -240,7 +240,7 @@ export const abi = [
       inputs: [],
       name: "safeMint",
       outputs: [],
-      stateMutability: "nonpayable",
+      stateMutability: "payable",
       type: "function",
     },
     {

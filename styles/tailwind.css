@@ -2896,6 +2896,11 @@ select {
   padding-top: 12rem;
 }
 
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
+}
+
 .pb-48 {
   padding-bottom: 12rem;
 }

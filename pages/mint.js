@@ -5,11 +5,14 @@ import { abi } from "const/abi";
 import Modal from "components/Modal/Modal";
 
 const Mint = () => {
+
+
   const { data, error, fetch, isFetching, isLoading, setData } =
     useWeb3ExecuteFunction({
       abi: abi,
       contractAddress: "0x1BD06A547113226b7a646DD97b7fDCFe372af018",
       functionName: "safeMint",
+      msgValue: "100000000000000000",
     });
 
   const errorMessage =
@@ -19,7 +22,7 @@ const Mint = () => {
   console.log("error", error);
   const onMint = () => {
     setData(undefined);
-    fetch();
+    fetch({ params: { msgValue: "100000000000000000" } });
   };
   console.log(data);
   return (
