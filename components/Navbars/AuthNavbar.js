@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import React from "react";
 import { useMoralis } from "react-moralis";
@@ -14,7 +15,7 @@ export default function Navbar(props) {
             <Link href="/">
               <a className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase">
                 <img
-                  src="/img/monkeyLab/monkey-labs-logo.png"
+                  src="/img/monkeyLab/monkey-white.svg"
                   className="h-12"
                   alt="monkey page logo"
                 />
@@ -35,7 +36,6 @@ export default function Navbar(props) {
             }
             id="example-navbar-warning"
           >
-         
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
                 {isAuthenticated ? (

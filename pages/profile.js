@@ -23,8 +23,7 @@ export default function Profile() {
           <div
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')",
+              backgroundImage: "url('/img/monkeyLab/monkeylab-banner.png')",
             }}
           >
             <span
@@ -63,7 +62,7 @@ export default function Profile() {
                       <div className="relative">
                         <img
                           alt="..."
-                          src="/img/team-2-800x800.jpg"
+                          src="/img/monkeyLab/monkeylab-profile.png"
                           className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16 max-w-150-px"
                         />
                       </div>

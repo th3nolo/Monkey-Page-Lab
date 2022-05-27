@@ -11,14 +11,14 @@ export default function Navbar(props) {
   const { authenticate, isAuthenticated, account, logout } = useMoralis();
   return (
     <>
-      <nav className="top-0 fixed z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-white shadow">
+      <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
               <a className="text-blueGray-700 text-sm font-bold leading-relaxed inline-block mr-4 whitespace-nowrap uppercase">
                 <img
-                  className="h-12 w-12 bg-white"
-                  src="/img/monkeyLab/monkey-labs-logo.png"
+                  className="h-16 w-12"
+                  src="/img/monkeyLab/monkey-white.svg"
                   alt="monkey page logo"
                 />
               </a>
@@ -42,7 +42,7 @@ export default function Navbar(props) {
               {isAuthenticated ? (
                 <li className="flex items-center">
                   <Link href="/profile">
-                    <a className="hover:text-blueGray-500 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
+                    <a className="hover:text-blueGray-500 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold">
                       My NFTs
                     </a>
                   </Link>
@@ -53,7 +53,7 @@ export default function Navbar(props) {
                 {isAuthenticated ? (
                   <button
                     onClick={() => logout()}
-                    className=" hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    className=" hover:text-blueGray-200 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   >
                     <i className="text-blueGray-400 far fa-user text-lg leading-lg mr-2" />{" "}
                     {account?.slice(0, 10)}...
@@ -61,7 +61,7 @@ export default function Navbar(props) {
                 ) : (
                   <button
                     onClick={authenticate}
-                    className=" hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    className=" hover:text-blueGray-200 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   >
                     Sing in
                   </button>
