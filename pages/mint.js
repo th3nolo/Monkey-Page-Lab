@@ -12,6 +12,11 @@ const Mint = () => {
       functionName: "safeMint",
     });
 
+  const errorMessage =
+    error &&
+    "An unexpected error has occurred, make sure you have metamask installed";
+
+  console.log("error", error);
   const onMint = () => {
     setData(undefined);
     fetch();
@@ -44,7 +49,7 @@ const Mint = () => {
                   </p>
 
                   <div className="text-center mt-6">
-                    {error && <p className="text-red-500">{error.message}</p>}
+                    {error && <p className="text-red-500">{errorMessage}</p>}
                     {isFetching || isLoading ? (
                       <div className="text-center">
                         <div
