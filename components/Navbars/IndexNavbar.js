@@ -61,7 +61,7 @@ export default function Navbar(props) {
                 ) : (
                   <button
                     onClick={authenticate}
-                    className=" hover:text-blueGray-200 text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+                    className="lg:text-white hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   >
                     Sing in
                   </button>
