@@ -3,16 +3,18 @@ import React from "react";
 
 import Navbar from "components/Navbars/AuthNavbar.js";
 import Footer from "components/Footers/Footer.js";
-import { useMoralis, useNFTBalances } from "react-moralis";
+import { useMoralis, useMoralisQuery, useNFTBalances } from "react-moralis";
 import CardNft from "components/Cards/CardNft";
 import { abi } from "const/abi";
 
 export default function Profile() {
   const { account } = useMoralis();
-  const { data, isLoading } = useNFTBalances({
-    abi: abi,
-    contractAddress: "0x0d092C42e0208d7D5147675E937205520244a967",
-  });
+
+  const { data, isLoading } = useMoralisQuery(
+    "TokenMetaData",
+    (query) => query.equalTo("owner", account).descending("createdAt"),
+    [account]
+  );
 
   return (
     <>
@@ -50,8 +52,7 @@ export default function Profile() {
             </svg>
           </div>
         </section>
-
-        {!isLoading && data ? (
+        {!isLoading && data && account ? (
           <section className="relative py-16 bg-blueGray-200">
             <div className="container mx-auto px-4">
               <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
@@ -87,20 +88,14 @@ export default function Profile() {
                   </div>
                   <div className="mt-4 py-6 border-t border-blueGray-200 text-center">
                     <div className="flex flex-wrap w-full">
-                      <div className="w-full px-4  grid grid-cols-3 gap-6">
-                        {data.result.map((nft) => (
+                      <div className="w-full px-4  grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {data.map((nft) => (
                           <CardNft
                             key={nft.id}
                             id={nft.id}
-                            metadata={nft.metadata}
-                            tokenId={nft.token_id}
-                            syncedAt={nft.synced_at}
+                            attributes={nft.attributes}
                           />
                         ))}
-                        <CardNft />
-                        <CardNft />
-                        <CardNft />
-                        <CardNft />
                       </div>
                     </div>
                   </div>

@@ -3988,6 +3988,10 @@ select {
   .lg\:bg-opacity-0 {
     --tw-bg-opacity: 0;
   }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
 
   .lg\:block {
     display: block;

@@ -1,11 +1,25 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useMoralis } from "react-moralis";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
-  const { authenticate, isAuthenticated, account, logout } = useMoralis();
+  const {
+    authenticate,
+    isAuthenticated,
+    account,
+    logout,
+    enableWeb3,
+    isWeb3Enabled,
+  } = useMoralis();
+
+  useEffect(() => {
+    if (!isAuthenticated && isWeb3Enabled) {
+      authenticate();
+    }
+    enableWeb3();
+  }, [isAuthenticated, isWeb3Enabled]);
 
   return (
     <>

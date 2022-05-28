@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
@@ -8,7 +8,21 @@ import { useMoralis } from "react-moralis";
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
 
-  const { authenticate, isAuthenticated, account, logout } = useMoralis();
+  const {
+    authenticate,
+    isAuthenticated,
+    account,
+    logout,
+    enableWeb3,
+    isWeb3Enabled,
+  } = useMoralis();
+
+  useEffect(() => {
+    if (!isAuthenticated && isWeb3Enabled) {
+      authenticate();
+    }
+    enableWeb3();
+  }, [isAuthenticated, isWeb3Enabled]);
   return (
     <>
       <nav className="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">

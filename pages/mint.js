@@ -35,7 +35,7 @@ const Mint = () => {
       >
         <p className="my-6">
           Your nft has been minted successfully. You can check your new NFT on
-          your dashboard in about 2 minutes.
+          your "My NFts" page in a moment.
         </p>
       </Modal>
       <div className=" pt-48 px-4 bg-blueGray-800 h-screen grid content-center z">
