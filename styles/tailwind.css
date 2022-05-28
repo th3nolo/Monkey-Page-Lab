@@ -1334,6 +1334,10 @@ select {
   background-color: rgba(185, 28, 28, var(--tw-bg-opacity));
 }
 
+.bg-pink {
+  background-color: #FF06A8;
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgba(244, 244, 245, var(--tw-bg-opacity));
@@ -2358,6 +2362,10 @@ select {
   margin-bottom: 1.25rem;
 }
 
+.mt-0 {
+  margin-top: 0rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
 }
@@ -2762,6 +2770,11 @@ select {
   padding-right: 3rem;
 }
 
+.px-20 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -2881,6 +2894,11 @@ select {
 
 .pt-48 {
   padding-top: 12rem;
+}
+
+.py-48 {
+  padding-top: 12rem;
+  padding-bottom: 12rem;
 }
 
 .pb-48 {
@@ -3609,6 +3627,10 @@ select {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .transform {
   --tw-translate-x: 0;
   --tw-translate-y: 0;
@@ -3966,6 +3988,10 @@ select {
   .lg\:bg-opacity-0 {
     --tw-bg-opacity: 0;
   }
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
 
   .lg\:block {
     display: block;
@@ -4024,6 +4050,10 @@ select {
 
   .lg\:mr-4 {
     margin-right: 1rem;
+  }
+
+  .lg\:mt-0 {
+    margin-top: 0rem;
   }
 
   .lg\:mt-16 {

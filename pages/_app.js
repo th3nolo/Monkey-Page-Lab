@@ -9,6 +9,7 @@ import PageChange from "components/PageChange/PageChange.js";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "styles/tailwind.css";
+import { MoralisProvider } from "react-moralis";
 
 Router.events.on("routeChangeStart", (url) => {
   console.log(`Loading: ${url}`);
@@ -37,6 +38,7 @@ export default class MyApp extends App {
 
     return { pageProps };
   }
+
   render() {
     const { Component, pageProps } = this.props;
 
@@ -52,10 +54,17 @@ export default class MyApp extends App {
           <title>Monkey page lab</title>
           <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
         </Head>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MoralisProvider
+          appId="HSCmGDWr2AsW2as0DmkYKFNJn7TEzlwQaNDP8vBz"
+          serverUrl="https://gazoxaxqwocw.usemoralis.com:2053/server"
+        >
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MoralisProvider>
       </React.Fragment>
     );
   }
 }
+
+
