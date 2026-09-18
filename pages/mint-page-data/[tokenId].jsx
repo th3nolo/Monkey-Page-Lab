@@ -10,7 +10,6 @@ import { dataURLtoFile } from "../../helpers";
 
 const client = new Web3Storage({ token: process.env.NEXT_PUBLIC_WEB3_TOKEN });
 
-console.log(process.env.NEXT_PUBLIC_WEB3_TOKEN);
 const initialState = {
   name: "",
   title: "",
